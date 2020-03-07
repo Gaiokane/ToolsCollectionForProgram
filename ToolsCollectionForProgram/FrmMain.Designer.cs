@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.功能集合ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.简化SQLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.大小写转换ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.生成随机字符ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.窗口设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.单窗口ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.单窗口ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.四窗口ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,7 +59,7 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.功能集合ToolStripMenuItem,
-            this.单窗口ToolStripMenuItem,
+            this.窗口设置ToolStripMenuItem,
             this.设置ToolStripMenuItem,
             this.退出ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -98,26 +99,28 @@
             this.生成随机字符ToolStripMenuItem.Text = "生成随机字符";
             this.生成随机字符ToolStripMenuItem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.生成随机字符ToolStripMenuItem_MouseDown);
             // 
+            // 窗口设置ToolStripMenuItem
+            // 
+            this.窗口设置ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.单窗口ToolStripMenuItem,
+            this.四窗口ToolStripMenuItem});
+            this.窗口设置ToolStripMenuItem.Name = "窗口设置ToolStripMenuItem";
+            this.窗口设置ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
+            this.窗口设置ToolStripMenuItem.Text = "窗口设置";
+            // 
             // 单窗口ToolStripMenuItem
             // 
-            this.单窗口ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.单窗口ToolStripMenuItem1,
-            this.四窗口ToolStripMenuItem});
             this.单窗口ToolStripMenuItem.Name = "单窗口ToolStripMenuItem";
-            this.单窗口ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
-            this.单窗口ToolStripMenuItem.Text = "窗口设置";
-            // 
-            // 单窗口ToolStripMenuItem1
-            // 
-            this.单窗口ToolStripMenuItem1.Name = "单窗口ToolStripMenuItem1";
-            this.单窗口ToolStripMenuItem1.Size = new System.Drawing.Size(112, 22);
-            this.单窗口ToolStripMenuItem1.Text = "单窗口";
+            this.单窗口ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.单窗口ToolStripMenuItem.Text = "单窗口";
+            this.单窗口ToolStripMenuItem.Click += new System.EventHandler(this.单窗口ToolStripMenuItem_Click);
             // 
             // 四窗口ToolStripMenuItem
             // 
             this.四窗口ToolStripMenuItem.Name = "四窗口ToolStripMenuItem";
-            this.四窗口ToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.四窗口ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.四窗口ToolStripMenuItem.Text = "四窗口";
+            this.四窗口ToolStripMenuItem.Click += new System.EventHandler(this.四窗口ToolStripMenuItem_Click);
             // 
             // 设置ToolStripMenuItem
             // 
@@ -139,7 +142,7 @@
             this.panel1.Location = new System.Drawing.Point(1, 27);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(692, 358);
-            this.panel1.TabIndex = 1;
+            this.panel1.TabIndex = 0;
             this.panel1.DragDrop += new System.Windows.Forms.DragEventHandler(this.panel1_DragDrop);
             this.panel1.DragEnter += new System.Windows.Forms.DragEventHandler(this.panel1_DragEnter);
             // 
@@ -148,7 +151,7 @@
             this.btnCommonFunctions1.Location = new System.Drawing.Point(1397, 27);
             this.btnCommonFunctions1.Name = "btnCommonFunctions1";
             this.btnCommonFunctions1.Size = new System.Drawing.Size(75, 75);
-            this.btnCommonFunctions1.TabIndex = 2;
+            this.btnCommonFunctions1.TabIndex = 4;
             this.btnCommonFunctions1.Text = "button1";
             this.btnCommonFunctions1.UseVisualStyleBackColor = true;
             this.btnCommonFunctions1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnCommonFunctions1_MouseDown);
@@ -158,7 +161,7 @@
             this.btnCommonFunctions2.Location = new System.Drawing.Point(1397, 108);
             this.btnCommonFunctions2.Name = "btnCommonFunctions2";
             this.btnCommonFunctions2.Size = new System.Drawing.Size(75, 75);
-            this.btnCommonFunctions2.TabIndex = 2;
+            this.btnCommonFunctions2.TabIndex = 5;
             this.btnCommonFunctions2.Text = "button2";
             this.btnCommonFunctions2.UseVisualStyleBackColor = true;
             this.btnCommonFunctions2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnCommonFunctions2_MouseDown);
@@ -168,7 +171,7 @@
             this.btnCommonFunctions3.Location = new System.Drawing.Point(1397, 189);
             this.btnCommonFunctions3.Name = "btnCommonFunctions3";
             this.btnCommonFunctions3.Size = new System.Drawing.Size(75, 75);
-            this.btnCommonFunctions3.TabIndex = 2;
+            this.btnCommonFunctions3.TabIndex = 6;
             this.btnCommonFunctions3.Text = "button3";
             this.btnCommonFunctions3.UseVisualStyleBackColor = true;
             this.btnCommonFunctions3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnCommonFunctions3_MouseDown);
@@ -178,7 +181,7 @@
             this.btnCommonFunctions4.Location = new System.Drawing.Point(1397, 270);
             this.btnCommonFunctions4.Name = "btnCommonFunctions4";
             this.btnCommonFunctions4.Size = new System.Drawing.Size(75, 75);
-            this.btnCommonFunctions4.TabIndex = 2;
+            this.btnCommonFunctions4.TabIndex = 7;
             this.btnCommonFunctions4.Text = "button4";
             this.btnCommonFunctions4.UseVisualStyleBackColor = true;
             this.btnCommonFunctions4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnCommonFunctions4_MouseDown);
@@ -188,7 +191,7 @@
             this.btnCommonFunctions5.Location = new System.Drawing.Point(1397, 351);
             this.btnCommonFunctions5.Name = "btnCommonFunctions5";
             this.btnCommonFunctions5.Size = new System.Drawing.Size(75, 75);
-            this.btnCommonFunctions5.TabIndex = 2;
+            this.btnCommonFunctions5.TabIndex = 8;
             this.btnCommonFunctions5.Text = "button5";
             this.btnCommonFunctions5.UseVisualStyleBackColor = true;
             this.btnCommonFunctions5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnCommonFunctions5_MouseDown);
@@ -198,7 +201,7 @@
             this.btnCommonFunctions6.Location = new System.Drawing.Point(1397, 432);
             this.btnCommonFunctions6.Name = "btnCommonFunctions6";
             this.btnCommonFunctions6.Size = new System.Drawing.Size(75, 75);
-            this.btnCommonFunctions6.TabIndex = 2;
+            this.btnCommonFunctions6.TabIndex = 9;
             this.btnCommonFunctions6.Text = "button6";
             this.btnCommonFunctions6.UseVisualStyleBackColor = true;
             this.btnCommonFunctions6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnCommonFunctions6_MouseDown);
@@ -208,7 +211,7 @@
             this.btnCommonFunctions7.Location = new System.Drawing.Point(1397, 513);
             this.btnCommonFunctions7.Name = "btnCommonFunctions7";
             this.btnCommonFunctions7.Size = new System.Drawing.Size(75, 75);
-            this.btnCommonFunctions7.TabIndex = 2;
+            this.btnCommonFunctions7.TabIndex = 10;
             this.btnCommonFunctions7.Text = "button7";
             this.btnCommonFunctions7.UseVisualStyleBackColor = true;
             this.btnCommonFunctions7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnCommonFunctions7_MouseDown);
@@ -218,7 +221,7 @@
             this.btnCommonFunctions8.Location = new System.Drawing.Point(1397, 594);
             this.btnCommonFunctions8.Name = "btnCommonFunctions8";
             this.btnCommonFunctions8.Size = new System.Drawing.Size(75, 75);
-            this.btnCommonFunctions8.TabIndex = 2;
+            this.btnCommonFunctions8.TabIndex = 11;
             this.btnCommonFunctions8.Text = "button8";
             this.btnCommonFunctions8.UseVisualStyleBackColor = true;
             this.btnCommonFunctions8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnCommonFunctions8_MouseDown);
@@ -228,7 +231,7 @@
             this.btnCommonFunctions9.Location = new System.Drawing.Point(1397, 675);
             this.btnCommonFunctions9.Name = "btnCommonFunctions9";
             this.btnCommonFunctions9.Size = new System.Drawing.Size(75, 75);
-            this.btnCommonFunctions9.TabIndex = 2;
+            this.btnCommonFunctions9.TabIndex = 12;
             this.btnCommonFunctions9.Text = "button9";
             this.btnCommonFunctions9.UseVisualStyleBackColor = true;
             this.btnCommonFunctions9.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnCommonFunctions9_MouseDown);
@@ -249,7 +252,7 @@
             this.panel3.Location = new System.Drawing.Point(1, 391);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(692, 358);
-            this.panel3.TabIndex = 1;
+            this.panel3.TabIndex = 2;
             this.panel3.DragDrop += new System.Windows.Forms.DragEventHandler(this.panel3_DragDrop);
             this.panel3.DragEnter += new System.Windows.Forms.DragEventHandler(this.panel3_DragEnter);
             // 
@@ -259,7 +262,7 @@
             this.panel4.Location = new System.Drawing.Point(699, 391);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(692, 358);
-            this.panel4.TabIndex = 1;
+            this.panel4.TabIndex = 3;
             this.panel4.DragDrop += new System.Windows.Forms.DragEventHandler(this.panel4_DragDrop);
             this.panel4.DragEnter += new System.Windows.Forms.DragEventHandler(this.panel4_DragEnter);
             // 
@@ -282,10 +285,11 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmMain";
+            this.Text = "工具集合";
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -310,14 +314,14 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.ToolStripMenuItem 功能集合ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 窗口设置ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 单窗口ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 单窗口ToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem 四窗口ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 设置ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 退出ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 简化SQLToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 大小写转换ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 生成随机字符ToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem 功能集合ToolStripMenuItem;
     }
 }

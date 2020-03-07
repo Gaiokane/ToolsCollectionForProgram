@@ -37,7 +37,7 @@
             this.richtxtboxNew.Location = new System.Drawing.Point(3, 182);
             this.richtxtboxNew.Name = "richtxtboxNew";
             this.richtxtboxNew.Size = new System.Drawing.Size(686, 173);
-            this.richtxtboxNew.TabIndex = 3;
+            this.richtxtboxNew.TabIndex = 1;
             this.richtxtboxNew.Text = "";
             this.richtxtboxNew.MouseClick += new System.Windows.Forms.MouseEventHandler(this.richtxtboxNew_MouseClick);
             // 
@@ -46,8 +46,9 @@
             this.richtxtboxOld.Location = new System.Drawing.Point(3, 3);
             this.richtxtboxOld.Name = "richtxtboxOld";
             this.richtxtboxOld.Size = new System.Drawing.Size(686, 173);
-            this.richtxtboxOld.TabIndex = 2;
+            this.richtxtboxOld.TabIndex = 0;
             this.richtxtboxOld.Text = "";
+            this.richtxtboxOld.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.richtxtboxOld_MouseDoubleClick);
             // 
             // UCSmplifySQL
             // 

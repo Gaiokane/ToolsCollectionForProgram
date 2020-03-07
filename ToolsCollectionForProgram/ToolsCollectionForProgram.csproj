@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Collection.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Gaiokane">
       <HintPath>..\..\..\dll\Gaiokane.dll</HintPath>
@@ -62,8 +65,15 @@
     <Compile Include="FrmSettings.Designer.cs">
       <DependentUpon>FrmSettings.cs</DependentUpon>
     </Compile>
+    <Compile Include="GenerateRandomValue.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UCGenerateRandomStrings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCGenerateRandomStrings.Designer.cs">
+      <DependentUpon>UCGenerateRandomStrings.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCNull.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -75,6 +85,12 @@
     </Compile>
     <Compile Include="UCSmplifySQL.Designer.cs">
       <DependentUpon>UCSmplifySQL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCUpperLowerCaseConversion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCUpperLowerCaseConversion.Designer.cs">
+      <DependentUpon>UCUpperLowerCaseConversion.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
@@ -91,11 +107,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UCGenerateRandomStrings.resx">
+      <DependentUpon>UCGenerateRandomStrings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UCNull.resx">
       <DependentUpon>UCNull.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCSmplifySQL.resx">
       <DependentUpon>UCSmplifySQL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCUpperLowerCaseConversion.resx">
+      <DependentUpon>UCUpperLowerCaseConversion.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -109,6 +131,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Collection.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

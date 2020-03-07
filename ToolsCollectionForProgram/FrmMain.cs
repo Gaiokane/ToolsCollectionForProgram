@@ -19,16 +19,55 @@ namespace ToolsCollectionForProgram
             InitializeComponent();
         }
 
+        #region 传入按钮Text值，获取对应窗体
+        /// <summary>
+        /// 传入按钮Text值，获取对应窗体
+        /// </summary>
+        /// <param name="btnName">按钮Text</param>
+        /// <returns>返回Control</returns>
+        private Control GetUserControlNameByButtonName(string btnName)
+        {
+            if (btnName == "简化SQL")
+            {
+                UCSmplifySQL ucss = new UCSmplifySQL();
+                return ucss;
+            }
+            if (btnName == "大小写转换")
+            {
+                UCUpperLowerCaseConversion uculcc = new UCUpperLowerCaseConversion();
+                return uculcc;
+            }
+            if (btnName == "生成随机字符")
+            {
+                UCGenerateRandomStrings ucgrs = new UCGenerateRandomStrings();
+                return ucgrs;
+            }
+            else
+            {
+                UCNull ucnull = new UCNull();
+                return ucnull;
+            }
+        }
+        #endregion
+
+        #region 窗体加载事件
         private void FrmMain_Load(object sender, EventArgs e)
         {
+            #region 常用功能按钮配置
+            //panel支持拖放
             panel1.AllowDrop = true;
             panel2.AllowDrop = true;
             panel3.AllowDrop = true;
             panel4.AllowDrop = true;
 
+            //读取常用功能按钮配置信息
             ConfigSettings.getDefaultBtnNameByappSettings();
+            //若没有读到，赋默认值
             ConfigSettings.setDefaultBtnNameIfIsNullOrEmptyByappSettings();
+            //重新读取常用功能按钮配置信息
+            ConfigSettings.getDefaultBtnNameByappSettings();
 
+            //将配置信息显示到按钮上
             btnCommonFunctions1.Text = ConfigSettings.btnname1;
             btnCommonFunctions2.Text = ConfigSettings.btnname2;
             btnCommonFunctions3.Text = ConfigSettings.btnname3;
@@ -38,7 +77,9 @@ namespace ToolsCollectionForProgram
             btnCommonFunctions7.Text = ConfigSettings.btnname7;
             btnCommonFunctions8.Text = ConfigSettings.btnname8;
             btnCommonFunctions9.Text = ConfigSettings.btnname9;
+            #endregion
         }
+        #endregion
 
         #region 右侧常用功能按钮拖拽效果
         private void btnCommonFunctions1_MouseDown(object sender, MouseEventArgs e)
@@ -124,27 +165,6 @@ namespace ToolsCollectionForProgram
         {
             string[] temp = btnData.Split(' ');
             return temp[2];
-        }
-        #endregion
-
-        #region 传入按钮Text值，获取对应窗体
-        /// <summary>
-        /// 传入按钮Text值，获取对应窗体
-        /// </summary>
-        /// <param name="btnName">按钮Text</param>
-        /// <returns>返回Control</returns>
-        private Control GetUserControlNameByButtonName(string btnName)
-        {
-            if (btnName == "简化SQL")
-            {
-                UCSmplifySQL ucss = new UCSmplifySQL();
-                return ucss;
-            }
-            else
-            {
-                UCNull ucnull = new UCNull();
-                return ucnull;
-            }
         }
         #endregion
 
@@ -447,6 +467,18 @@ namespace ToolsCollectionForProgram
         }
         #endregion
 
+        #region 窗口设置（预留功能）单窗口、四窗口切换
+        private void 单窗口ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("预留功能");
+        }
+
+        private void 四窗口ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("预留功能");
+        }
+        #endregion
+
         #region 设置按钮单击事件，只能打开一个设置窗口
         private void 设置ToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -465,6 +497,7 @@ namespace ToolsCollectionForProgram
             }
         }
         #endregion
+
         #endregion
     }
 }
