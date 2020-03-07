@@ -104,9 +104,8 @@ namespace ToolsCollectionForProgram
         private void btnCommonFunctionsButtonSave_Click(object sender, EventArgs e)
         {
             setCommonFunctionsButtonName();
-            MessageBox.Show("保存成功 请重新运行");
+            MessageBox.Show("保存成功！");
             getCommonFunctionsButtonName();
-            Application.Exit();
         }
         #endregion
 
@@ -195,6 +194,13 @@ namespace ToolsCollectionForProgram
             {
                 RWConfig.SetappSettingsValue("btnname9", cmbboxCommonFunctionsButton9.SelectedItem.ToString(), "./ToolsCollectionForProgram.exe");
             }
+        }
+        #endregion
+
+        #region 窗体关闭时返回一个DialogResult，FrmMain接收返回值右侧常用功能按钮
+        private void FrmSettings_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
         }
         #endregion
     }

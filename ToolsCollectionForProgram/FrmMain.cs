@@ -53,13 +53,23 @@ namespace ToolsCollectionForProgram
         #region 窗体加载事件
         private void FrmMain_Load(object sender, EventArgs e)
         {
-            #region 常用功能按钮配置
             //panel支持拖放
             panel1.AllowDrop = true;
             panel2.AllowDrop = true;
             panel3.AllowDrop = true;
             panel4.AllowDrop = true;
 
+            //读取常用功能按钮配置信息赋值给常用功能按钮
+            setCommonFunctionsButtonTextByConfig();
+        }
+        #endregion
+
+        #region 读取常用功能按钮配置信息赋值给常用功能按钮
+        /// <summary>
+        /// 读取常用功能按钮配置信息赋值给常用功能按钮
+        /// </summary>
+        private void setCommonFunctionsButtonTextByConfig()
+        {
             //读取常用功能按钮配置信息
             ConfigSettings.getDefaultBtnNameByappSettings();
             //若没有读到，赋默认值
@@ -77,7 +87,6 @@ namespace ToolsCollectionForProgram
             btnCommonFunctions7.Text = ConfigSettings.btnname7;
             btnCommonFunctions8.Text = ConfigSettings.btnname8;
             btnCommonFunctions9.Text = ConfigSettings.btnname9;
-            #endregion
         }
         #endregion
 
@@ -479,12 +488,18 @@ namespace ToolsCollectionForProgram
         }
         #endregion
 
-        #region 设置按钮单击事件，只能打开一个设置窗口
+        #region 设置按钮单击事件，只能打开一个设置窗口，接收FrmSettings返回值刷新右侧常用按钮功能Text
         private void 设置ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //设置只能打开一个，配合FrmSettings中的GetFrmSettings()设置
             FrmSettings.GetFrmSettings().Activate();
-            FrmSettings.GetFrmSettings().Show();
+
+            //接收FrmSettings返回的DialogResult，刷新右侧常用按钮功能Text
+            FrmSettings fs = new FrmSettings();
+            if (fs.ShowDialog() == DialogResult.OK)
+            {
+                setCommonFunctionsButtonTextByConfig();
+            }
         }
         #endregion
 
