@@ -29,6 +29,15 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.功能集合ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.简化SQLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.大小写转换ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.生成随机字符ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.单窗口ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.单窗口ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.四窗口ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCommonFunctions1 = new System.Windows.Forms.Button();
             this.btnCommonFunctions2 = new System.Windows.Forms.Button();
@@ -42,15 +51,87 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.功能集合ToolStripMenuItem,
+            this.单窗口ToolStripMenuItem,
+            this.设置ToolStripMenuItem,
+            this.退出ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1484, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1484, 25);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // 功能集合ToolStripMenuItem
+            // 
+            this.功能集合ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.简化SQLToolStripMenuItem,
+            this.大小写转换ToolStripMenuItem,
+            this.生成随机字符ToolStripMenuItem});
+            this.功能集合ToolStripMenuItem.Name = "功能集合ToolStripMenuItem";
+            this.功能集合ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
+            this.功能集合ToolStripMenuItem.Text = "功能集合";
+            // 
+            // 简化SQLToolStripMenuItem
+            // 
+            this.简化SQLToolStripMenuItem.Name = "简化SQLToolStripMenuItem";
+            this.简化SQLToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.简化SQLToolStripMenuItem.Text = "简化SQL";
+            this.简化SQLToolStripMenuItem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.简化SQLToolStripMenuItem_MouseDown);
+            // 
+            // 大小写转换ToolStripMenuItem
+            // 
+            this.大小写转换ToolStripMenuItem.Name = "大小写转换ToolStripMenuItem";
+            this.大小写转换ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.大小写转换ToolStripMenuItem.Text = "大小写转换";
+            this.大小写转换ToolStripMenuItem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.大小写转换ToolStripMenuItem_MouseDown);
+            // 
+            // 生成随机字符ToolStripMenuItem
+            // 
+            this.生成随机字符ToolStripMenuItem.Name = "生成随机字符ToolStripMenuItem";
+            this.生成随机字符ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.生成随机字符ToolStripMenuItem.Text = "生成随机字符";
+            this.生成随机字符ToolStripMenuItem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.生成随机字符ToolStripMenuItem_MouseDown);
+            // 
+            // 单窗口ToolStripMenuItem
+            // 
+            this.单窗口ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.单窗口ToolStripMenuItem1,
+            this.四窗口ToolStripMenuItem});
+            this.单窗口ToolStripMenuItem.Name = "单窗口ToolStripMenuItem";
+            this.单窗口ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
+            this.单窗口ToolStripMenuItem.Text = "窗口设置";
+            // 
+            // 单窗口ToolStripMenuItem1
+            // 
+            this.单窗口ToolStripMenuItem1.Name = "单窗口ToolStripMenuItem1";
+            this.单窗口ToolStripMenuItem1.Size = new System.Drawing.Size(112, 22);
+            this.单窗口ToolStripMenuItem1.Text = "单窗口";
+            // 
+            // 四窗口ToolStripMenuItem
+            // 
+            this.四窗口ToolStripMenuItem.Name = "四窗口ToolStripMenuItem";
+            this.四窗口ToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.四窗口ToolStripMenuItem.Text = "四窗口";
+            // 
+            // 设置ToolStripMenuItem
+            // 
+            this.设置ToolStripMenuItem.Name = "设置ToolStripMenuItem";
+            this.设置ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.设置ToolStripMenuItem.Text = "设置";
+            this.设置ToolStripMenuItem.Click += new System.EventHandler(this.设置ToolStripMenuItem_Click);
+            // 
+            // 退出ToolStripMenuItem
+            // 
+            this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.退出ToolStripMenuItem.Text = "退出";
+            this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
             // panel1
             // 
@@ -206,6 +287,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMain";
             this.Load += new System.EventHandler(this.FrmMain_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -227,5 +310,14 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.ToolStripMenuItem 功能集合ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 单窗口ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 单窗口ToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem 四窗口ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 设置ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 退出ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 简化SQLToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 大小写转换ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 生成随机字符ToolStripMenuItem;
     }
 }

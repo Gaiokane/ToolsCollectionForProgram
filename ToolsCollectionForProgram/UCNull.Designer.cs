@@ -34,11 +34,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(49, 68);
+            this.label1.Location = new System.Drawing.Point(318, 173);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 12);
             this.label1.TabIndex = 0;
-            this.label1.Text = "无此功能";
+            this.label1.Text = "暂无功能";
             // 
             // UCNull
             // 
@@ -46,6 +46,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label1);
             this.Name = "UCNull";
+            this.Size = new System.Drawing.Size(692, 358);
             this.ResumeLayout(false);
             this.PerformLayout();
 
