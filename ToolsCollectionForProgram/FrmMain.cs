@@ -12,6 +12,13 @@ namespace ToolsCollectionForProgram
 {
     public partial class FrmMain : Form
     {
+        /*
+         * 新增功能需要添加部分：
+         * 1.窗体FrmMain菜单栏中功能集合下添加相应按钮
+         * 2.菜单栏中按钮增加MouseDown事件（可参考：简化SQLToolStripMenuItem_MouseDown）
+         * 3.函数GetUserControlNameByButtonName添加对应窗体名称
+         */
+
         int typeid = 0;//拖入panel的控件类型id，0：其他，1：button，2：ToolStripItem
 
         public FrmMain()
@@ -41,6 +48,11 @@ namespace ToolsCollectionForProgram
             {
                 UCGenerateRandomStrings ucgrs = new UCGenerateRandomStrings();
                 return ucgrs;
+            }
+            if (btnName == "实体类赋值")
+            {
+                UCEntityClassAssignment uceca = new UCEntityClassAssignment();
+                return uceca;
             }
             else
             {
@@ -472,6 +484,16 @@ namespace ToolsCollectionForProgram
             if (e.Button == System.Windows.Forms.MouseButtons.Left)
             {
                 生成随机字符ToolStripMenuItem.DoDragDrop(生成随机字符ToolStripMenuItem, DragDropEffects.Copy);//发送的拖拽效果
+            }
+        }
+        #endregion
+
+        #region 实体类赋值拖拽效果
+        private void 实体类赋值ToolStripMenuItem_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                实体类赋值ToolStripMenuItem.DoDragDrop(实体类赋值ToolStripMenuItem, DragDropEffects.Copy);//发送的拖拽效果
             }
         }
         #endregion
