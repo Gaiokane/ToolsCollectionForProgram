@@ -74,6 +74,12 @@
     <Compile Include="UCEntityClassAssignment.Designer.cs">
       <DependentUpon>UCEntityClassAssignment.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCExtractEntityClassName.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCExtractEntityClassName.Designer.cs">
+      <DependentUpon>UCExtractEntityClassName.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCGenerateRandomStrings.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -115,6 +121,9 @@
     </Compile>
     <EmbeddedResource Include="UCEntityClassAssignment.resx">
       <DependentUpon>UCEntityClassAssignment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCExtractEntityClassName.resx">
+      <DependentUpon>UCExtractEntityClassName.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCGenerateRandomStrings.resx">
       <DependentUpon>UCGenerateRandomStrings.cs</DependentUpon>

@@ -54,6 +54,11 @@ namespace ToolsCollectionForProgram
                 UCEntityClassAssignment uceca = new UCEntityClassAssignment();
                 return uceca;
             }
+            if (btnName == "提取实体类名")
+            {
+                UCExtractEntityClassName uceecn = new UCExtractEntityClassName();
+                return uceecn;
+            }
             else
             {
                 UCNull ucnull = new UCNull();
@@ -494,6 +499,16 @@ namespace ToolsCollectionForProgram
             if (e.Button == System.Windows.Forms.MouseButtons.Left)
             {
                 实体类赋值ToolStripMenuItem.DoDragDrop(实体类赋值ToolStripMenuItem, DragDropEffects.Copy);//发送的拖拽效果
+            }
+        }
+        #endregion
+
+        #region 提取实体类名拖拽效果
+        private void 提取实体类名ToolStripMenuItem_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                提取实体类名ToolStripMenuItem.DoDragDrop(提取实体类名ToolStripMenuItem, DragDropEffects.Copy);//发送的拖拽效果
             }
         }
         #endregion
