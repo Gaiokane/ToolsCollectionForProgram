@@ -59,6 +59,11 @@ namespace ToolsCollectionForProgram
                 UCExtractEntityClassName uceecn = new UCExtractEntityClassName();
                 return uceecn;
             }
+            if (btnName == "批量生成时间")
+            {
+                UCBatchGenerationTime ucbgt = new UCBatchGenerationTime();
+                return ucbgt;
+            }
             else
             {
                 UCNull ucnull = new UCNull();
@@ -509,6 +514,16 @@ namespace ToolsCollectionForProgram
             if (e.Button == System.Windows.Forms.MouseButtons.Left)
             {
                 提取实体类名ToolStripMenuItem.DoDragDrop(提取实体类名ToolStripMenuItem, DragDropEffects.Copy);//发送的拖拽效果
+            }
+        }
+        #endregion
+
+        #region 批量生成时间拖拽效果
+        private void 批量生成时间ToolStripMenuItem_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                批量生成时间ToolStripMenuItem.DoDragDrop(批量生成时间ToolStripMenuItem, DragDropEffects.Copy);//发送的拖拽效果
             }
         }
         #endregion

@@ -35,6 +35,7 @@
             this.大小写转换ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.生成随机字符ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.实体类赋值ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.提取实体类名ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.窗口设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.单窗口ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.四窗口ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,7 +54,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.提取实体类名ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.批量生成时间ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,7 +78,8 @@
             this.大小写转换ToolStripMenuItem,
             this.生成随机字符ToolStripMenuItem,
             this.实体类赋值ToolStripMenuItem,
-            this.提取实体类名ToolStripMenuItem});
+            this.提取实体类名ToolStripMenuItem,
+            this.批量生成时间ToolStripMenuItem});
             this.功能集合ToolStripMenuItem.Name = "功能集合ToolStripMenuItem";
             this.功能集合ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
             this.功能集合ToolStripMenuItem.Text = "功能集合";
@@ -109,6 +111,13 @@
             this.实体类赋值ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.实体类赋值ToolStripMenuItem.Text = "实体类赋值";
             this.实体类赋值ToolStripMenuItem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.实体类赋值ToolStripMenuItem_MouseDown);
+            // 
+            // 提取实体类名ToolStripMenuItem
+            // 
+            this.提取实体类名ToolStripMenuItem.Name = "提取实体类名ToolStripMenuItem";
+            this.提取实体类名ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.提取实体类名ToolStripMenuItem.Text = "提取实体类名";
+            this.提取实体类名ToolStripMenuItem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.提取实体类名ToolStripMenuItem_MouseDown);
             // 
             // 窗口设置ToolStripMenuItem
             // 
@@ -277,12 +286,12 @@
             this.panel4.DragDrop += new System.Windows.Forms.DragEventHandler(this.panel4_DragDrop);
             this.panel4.DragEnter += new System.Windows.Forms.DragEventHandler(this.panel4_DragEnter);
             // 
-            // 提取实体类名ToolStripMenuItem
+            // 批量生成时间ToolStripMenuItem
             // 
-            this.提取实体类名ToolStripMenuItem.Name = "提取实体类名ToolStripMenuItem";
-            this.提取实体类名ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.提取实体类名ToolStripMenuItem.Text = "提取实体类名";
-            this.提取实体类名ToolStripMenuItem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.提取实体类名ToolStripMenuItem_MouseDown);
+            this.批量生成时间ToolStripMenuItem.Name = "批量生成时间ToolStripMenuItem";
+            this.批量生成时间ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.批量生成时间ToolStripMenuItem.Text = "批量生成时间";
+            this.批量生成时间ToolStripMenuItem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.批量生成时间ToolStripMenuItem_MouseDown);
             // 
             // FrmMain
             // 
@@ -343,5 +352,6 @@
         public System.Windows.Forms.ToolStripMenuItem 功能集合ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 实体类赋值ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 提取实体类名ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 批量生成时间ToolStripMenuItem;
     }
 }
