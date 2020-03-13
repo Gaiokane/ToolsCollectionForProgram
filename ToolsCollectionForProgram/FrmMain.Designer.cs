@@ -36,6 +36,8 @@
             this.生成随机字符ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.实体类赋值ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.提取实体类名ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.批量生成时间ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.剩余下载时间计算ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.窗口设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.单窗口ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.四窗口ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,7 +56,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.批量生成时间ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,7 +80,8 @@
             this.生成随机字符ToolStripMenuItem,
             this.实体类赋值ToolStripMenuItem,
             this.提取实体类名ToolStripMenuItem,
-            this.批量生成时间ToolStripMenuItem});
+            this.批量生成时间ToolStripMenuItem,
+            this.剩余下载时间计算ToolStripMenuItem});
             this.功能集合ToolStripMenuItem.Name = "功能集合ToolStripMenuItem";
             this.功能集合ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
             this.功能集合ToolStripMenuItem.Text = "功能集合";
@@ -118,6 +120,20 @@
             this.提取实体类名ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.提取实体类名ToolStripMenuItem.Text = "提取实体类名";
             this.提取实体类名ToolStripMenuItem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.提取实体类名ToolStripMenuItem_MouseDown);
+            // 
+            // 批量生成时间ToolStripMenuItem
+            // 
+            this.批量生成时间ToolStripMenuItem.Name = "批量生成时间ToolStripMenuItem";
+            this.批量生成时间ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.批量生成时间ToolStripMenuItem.Text = "批量生成时间";
+            this.批量生成时间ToolStripMenuItem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.批量生成时间ToolStripMenuItem_MouseDown);
+            // 
+            // 剩余下载时间计算ToolStripMenuItem
+            // 
+            this.剩余下载时间计算ToolStripMenuItem.Name = "剩余下载时间计算ToolStripMenuItem";
+            this.剩余下载时间计算ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.剩余下载时间计算ToolStripMenuItem.Text = "剩余下载时间计算";
+            this.剩余下载时间计算ToolStripMenuItem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.剩余下载时间计算ToolStripMenuItem_MouseDown);
             // 
             // 窗口设置ToolStripMenuItem
             // 
@@ -158,6 +174,7 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Location = new System.Drawing.Point(1, 27);
             this.panel1.Name = "panel1";
@@ -168,6 +185,7 @@
             // 
             // btnCommonFunctions1
             // 
+            this.btnCommonFunctions1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnCommonFunctions1.Location = new System.Drawing.Point(1397, 27);
             this.btnCommonFunctions1.Name = "btnCommonFunctions1";
             this.btnCommonFunctions1.Size = new System.Drawing.Size(75, 75);
@@ -178,6 +196,7 @@
             // 
             // btnCommonFunctions2
             // 
+            this.btnCommonFunctions2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnCommonFunctions2.Location = new System.Drawing.Point(1397, 108);
             this.btnCommonFunctions2.Name = "btnCommonFunctions2";
             this.btnCommonFunctions2.Size = new System.Drawing.Size(75, 75);
@@ -188,6 +207,7 @@
             // 
             // btnCommonFunctions3
             // 
+            this.btnCommonFunctions3.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnCommonFunctions3.Location = new System.Drawing.Point(1397, 189);
             this.btnCommonFunctions3.Name = "btnCommonFunctions3";
             this.btnCommonFunctions3.Size = new System.Drawing.Size(75, 75);
@@ -198,6 +218,7 @@
             // 
             // btnCommonFunctions4
             // 
+            this.btnCommonFunctions4.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnCommonFunctions4.Location = new System.Drawing.Point(1397, 270);
             this.btnCommonFunctions4.Name = "btnCommonFunctions4";
             this.btnCommonFunctions4.Size = new System.Drawing.Size(75, 75);
@@ -208,6 +229,7 @@
             // 
             // btnCommonFunctions5
             // 
+            this.btnCommonFunctions5.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnCommonFunctions5.Location = new System.Drawing.Point(1397, 351);
             this.btnCommonFunctions5.Name = "btnCommonFunctions5";
             this.btnCommonFunctions5.Size = new System.Drawing.Size(75, 75);
@@ -218,6 +240,7 @@
             // 
             // btnCommonFunctions6
             // 
+            this.btnCommonFunctions6.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnCommonFunctions6.Location = new System.Drawing.Point(1397, 432);
             this.btnCommonFunctions6.Name = "btnCommonFunctions6";
             this.btnCommonFunctions6.Size = new System.Drawing.Size(75, 75);
@@ -228,6 +251,7 @@
             // 
             // btnCommonFunctions7
             // 
+            this.btnCommonFunctions7.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnCommonFunctions7.Location = new System.Drawing.Point(1397, 513);
             this.btnCommonFunctions7.Name = "btnCommonFunctions7";
             this.btnCommonFunctions7.Size = new System.Drawing.Size(75, 75);
@@ -238,6 +262,7 @@
             // 
             // btnCommonFunctions8
             // 
+            this.btnCommonFunctions8.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnCommonFunctions8.Location = new System.Drawing.Point(1397, 594);
             this.btnCommonFunctions8.Name = "btnCommonFunctions8";
             this.btnCommonFunctions8.Size = new System.Drawing.Size(75, 75);
@@ -248,6 +273,7 @@
             // 
             // btnCommonFunctions9
             // 
+            this.btnCommonFunctions9.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnCommonFunctions9.Location = new System.Drawing.Point(1397, 675);
             this.btnCommonFunctions9.Name = "btnCommonFunctions9";
             this.btnCommonFunctions9.Size = new System.Drawing.Size(75, 75);
@@ -258,6 +284,7 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Location = new System.Drawing.Point(699, 27);
             this.panel2.Name = "panel2";
@@ -268,6 +295,7 @@
             // 
             // panel3
             // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Location = new System.Drawing.Point(1, 391);
             this.panel3.Name = "panel3";
@@ -278,6 +306,7 @@
             // 
             // panel4
             // 
+            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Location = new System.Drawing.Point(699, 391);
             this.panel4.Name = "panel4";
@@ -286,18 +315,13 @@
             this.panel4.DragDrop += new System.Windows.Forms.DragEventHandler(this.panel4_DragDrop);
             this.panel4.DragEnter += new System.Windows.Forms.DragEventHandler(this.panel4_DragEnter);
             // 
-            // 批量生成时间ToolStripMenuItem
-            // 
-            this.批量生成时间ToolStripMenuItem.Name = "批量生成时间ToolStripMenuItem";
-            this.批量生成时间ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.批量生成时间ToolStripMenuItem.Text = "批量生成时间";
-            this.批量生成时间ToolStripMenuItem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.批量生成时间ToolStripMenuItem_MouseDown);
-            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1484, 751);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.btnCommonFunctions9);
             this.Controls.Add(this.btnCommonFunctions8);
             this.Controls.Add(this.btnCommonFunctions4);
@@ -307,9 +331,7 @@
             this.Controls.Add(this.btnCommonFunctions2);
             this.Controls.Add(this.btnCommonFunctions5);
             this.Controls.Add(this.btnCommonFunctions1);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -353,5 +375,6 @@
         private System.Windows.Forms.ToolStripMenuItem 实体类赋值ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 提取实体类名ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 批量生成时间ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 剩余下载时间计算ToolStripMenuItem;
     }
 }

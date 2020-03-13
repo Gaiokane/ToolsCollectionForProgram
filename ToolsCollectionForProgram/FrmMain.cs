@@ -36,33 +36,38 @@ namespace ToolsCollectionForProgram
         {
             if (btnName == "简化SQL")
             {
-                UCSmplifySQL ucss = new UCSmplifySQL();
-                return ucss;
+                UCSmplifySQL uc = new UCSmplifySQL();
+                return uc;
             }
             if (btnName == "大小写转换")
             {
-                UCUpperLowerCaseConversion uculcc = new UCUpperLowerCaseConversion();
-                return uculcc;
+                UCUpperLowerCaseConversion uc = new UCUpperLowerCaseConversion();
+                return uc;
             }
             if (btnName == "生成随机字符")
             {
-                UCGenerateRandomStrings ucgrs = new UCGenerateRandomStrings();
-                return ucgrs;
+                UCGenerateRandomStrings uc = new UCGenerateRandomStrings();
+                return uc;
             }
             if (btnName == "实体类赋值")
             {
-                UCEntityClassAssignment uceca = new UCEntityClassAssignment();
-                return uceca;
+                UCEntityClassAssignment uc = new UCEntityClassAssignment();
+                return uc;
             }
             if (btnName == "提取实体类名")
             {
-                UCExtractEntityClassName uceecn = new UCExtractEntityClassName();
-                return uceecn;
+                UCExtractEntityClassName uc = new UCExtractEntityClassName();
+                return uc;
             }
             if (btnName == "批量生成时间")
             {
-                UCBatchGenerationTime ucbgt = new UCBatchGenerationTime();
-                return ucbgt;
+                UCBatchGenerationTime uc = new UCBatchGenerationTime();
+                return uc;
+            }
+            if (btnName == "剩余下载时间计算")
+            {
+                UCRemainingDownloadTimeCalculator uc = new UCRemainingDownloadTimeCalculator();
+                return uc;
             }
             else
             {
@@ -524,6 +529,16 @@ namespace ToolsCollectionForProgram
             if (e.Button == System.Windows.Forms.MouseButtons.Left)
             {
                 批量生成时间ToolStripMenuItem.DoDragDrop(批量生成时间ToolStripMenuItem, DragDropEffects.Copy);//发送的拖拽效果
+            }
+        }
+        #endregion
+
+        #region 剩余下载时间计算拖拽效果
+        private void 剩余下载时间计算ToolStripMenuItem_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                剩余下载时间计算ToolStripMenuItem.DoDragDrop(剩余下载时间计算ToolStripMenuItem, DragDropEffects.Copy);//发送的拖拽效果
             }
         }
         #endregion

@@ -98,6 +98,12 @@
     <Compile Include="UCNull.Designer.cs">
       <DependentUpon>UCNull.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCRemainingDownloadTimeCalculator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCRemainingDownloadTimeCalculator.Designer.cs">
+      <DependentUpon>UCRemainingDownloadTimeCalculator.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCSmplifySQL.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -139,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UCNull.resx">
       <DependentUpon>UCNull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCRemainingDownloadTimeCalculator.resx">
+      <DependentUpon>UCRemainingDownloadTimeCalculator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCSmplifySQL.resx">
       <DependentUpon>UCSmplifySQL.cs</DependentUpon>
