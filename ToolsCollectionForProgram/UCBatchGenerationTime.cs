@@ -34,6 +34,9 @@ namespace ToolsCollectionForProgram
 
             //秒单选按钮默认选中
             radiobtnSeconds.Checked = true;
+
+            //排序升序单选按钮默认选中
+            radiobtnSortAsc.Checked = true;
         }
         #endregion
 
@@ -102,7 +105,16 @@ namespace ToolsCollectionForProgram
                                 }
                             }
                             //赋值给结果文本框
-                            richtxtboxResultDate.Text = result;
+                            //richtxtboxResultDate.Text = result;
+
+                            if (radiobtnSortAsc.Checked == true)
+                            {
+                                richtxtboxResultDate.Text = SortStr(result, "+");
+                            }
+                            if (radiobtnSortDesc.Checked == true)
+                            {
+                                richtxtboxResultDate.Text = SortStr(result, "-");
+                            }
                         }
                         catch (Exception ex)
                         {
@@ -130,6 +142,53 @@ namespace ToolsCollectionForProgram
             if (!(Char.IsNumber(e.KeyChar) || e.KeyChar == '\b'))
             {
                 e.Handled = true;
+            }
+        }
+        #endregion
+
+        #region 对list中元素进行排序
+        /// <summary>
+        /// 对list中元素进行排序
+        /// </summary>
+        /// <param name="Str">字符串</param>
+        /// <param name="Sort">升序：+，倒叙：-</param>
+        /// <returns>返回排序完的字符串，以\n分割</returns>
+        private string SortStr(string Str, string Sort)
+        {
+            if (string.IsNullOrEmpty(Str) == true)
+            {
+                return Str;
+            }
+            else
+            {
+                List<string> list = Str.Split(new string[] { "\n" }, StringSplitOptions.None).ToList();
+                if (Sort == "+")
+                {
+                    list.Sort();
+                }
+                else if (Sort == "-")
+                {
+                    list.Reverse();
+                }
+                else
+                {
+                    list.Sort();
+                }
+                return String.Join("\n", list.ToArray()).Trim();
+            }
+        }
+        #endregion
+
+        #region 排序方式单选按钮单击事件
+        private void radiobtnSortAsc_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radiobtnSortAsc.Checked == true)
+            {
+                richtxtboxResultDate.Text = SortStr(richtxtboxResultDate.Text, "+");
+            }
+            if (radiobtnSortDesc.Checked == true)
+            {
+                richtxtboxResultDate.Text = SortStr(richtxtboxResultDate.Text, "-");
             }
         }
         #endregion

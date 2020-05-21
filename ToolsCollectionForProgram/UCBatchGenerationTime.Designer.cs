@@ -41,6 +41,10 @@
             this.radiobtnDays = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
             this.txtboxTimeInterval = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radiobtnSortDesc = new System.Windows.Forms.RadioButton();
+            this.radiobtnSortAsc = new System.Windows.Forms.RadioButton();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -162,10 +166,45 @@
             this.txtboxTimeInterval.TabIndex = 5;
             this.txtboxTimeInterval.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtboxTimeInterval_KeyPress);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radiobtnSortDesc);
+            this.groupBox1.Controls.Add(this.radiobtnSortAsc);
+            this.groupBox1.Location = new System.Drawing.Point(272, 93);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(112, 42);
+            this.groupBox1.TabIndex = 11;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "排序方式";
+            // 
+            // radiobtnSortDesc
+            // 
+            this.radiobtnSortDesc.AutoSize = true;
+            this.radiobtnSortDesc.Location = new System.Drawing.Point(59, 20);
+            this.radiobtnSortDesc.Name = "radiobtnSortDesc";
+            this.radiobtnSortDesc.Size = new System.Drawing.Size(47, 16);
+            this.radiobtnSortDesc.TabIndex = 1;
+            this.radiobtnSortDesc.TabStop = true;
+            this.radiobtnSortDesc.Text = "降序";
+            this.radiobtnSortDesc.UseVisualStyleBackColor = true;
+            // 
+            // radiobtnSortAsc
+            // 
+            this.radiobtnSortAsc.AutoSize = true;
+            this.radiobtnSortAsc.Location = new System.Drawing.Point(6, 20);
+            this.radiobtnSortAsc.Name = "radiobtnSortAsc";
+            this.radiobtnSortAsc.Size = new System.Drawing.Size(47, 16);
+            this.radiobtnSortAsc.TabIndex = 0;
+            this.radiobtnSortAsc.TabStop = true;
+            this.radiobtnSortAsc.Text = "升序";
+            this.radiobtnSortAsc.UseVisualStyleBackColor = true;
+            this.radiobtnSortAsc.CheckedChanged += new System.EventHandler(this.radiobtnSortAsc_CheckedChanged);
+            // 
             // UCBatchGenerationTime
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.radiobtnDays);
             this.Controls.Add(this.radiobtnHours);
             this.Controls.Add(this.radiobtnMinutes);
@@ -182,6 +221,8 @@
             this.Name = "UCBatchGenerationTime";
             this.Size = new System.Drawing.Size(692, 358);
             this.Load += new System.EventHandler(this.UCBatchGenerationTime_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,5 +243,8 @@
         private System.Windows.Forms.RadioButton radiobtnDays;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtboxTimeInterval;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton radiobtnSortAsc;
+        private System.Windows.Forms.RadioButton radiobtnSortDesc;
     }
 }

@@ -36,8 +36,9 @@
     <ApplicationIcon>Collection.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Gaiokane">
-      <HintPath>..\..\..\dll\Gaiokane.dll</HintPath>
+    <Reference Include="Gaiokane, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\dll\Gaiokane 2.0 含删除\Gaiokane.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
