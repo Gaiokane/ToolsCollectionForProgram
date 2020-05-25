@@ -56,6 +56,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.时间计算器ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,7 +82,8 @@
             this.实体类赋值ToolStripMenuItem,
             this.提取实体类名ToolStripMenuItem,
             this.批量生成时间ToolStripMenuItem,
-            this.剩余下载时间计算ToolStripMenuItem});
+            this.剩余下载时间计算ToolStripMenuItem,
+            this.时间计算器ToolStripMenuItem});
             this.功能集合ToolStripMenuItem.Name = "功能集合ToolStripMenuItem";
             this.功能集合ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
             this.功能集合ToolStripMenuItem.Text = "功能集合";
@@ -315,6 +317,13 @@
             this.panel4.DragDrop += new System.Windows.Forms.DragEventHandler(this.panel4_DragDrop);
             this.panel4.DragEnter += new System.Windows.Forms.DragEventHandler(this.panel4_DragEnter);
             // 
+            // 时间计算器ToolStripMenuItem
+            // 
+            this.时间计算器ToolStripMenuItem.Name = "时间计算器ToolStripMenuItem";
+            this.时间计算器ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.时间计算器ToolStripMenuItem.Text = "时间计算器";
+            this.时间计算器ToolStripMenuItem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.时间计算器ToolStripMenuItem_MouseDown);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -376,5 +385,6 @@
         private System.Windows.Forms.ToolStripMenuItem 提取实体类名ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 批量生成时间ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 剩余下载时间计算ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 时间计算器ToolStripMenuItem;
     }
 }

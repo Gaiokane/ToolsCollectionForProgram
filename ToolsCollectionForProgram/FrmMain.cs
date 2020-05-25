@@ -69,6 +69,11 @@ namespace ToolsCollectionForProgram
                 UCRemainingDownloadTimeCalculator uc = new UCRemainingDownloadTimeCalculator();
                 return uc;
             }
+            if (btnName == "时间计算器")
+            {
+                UCTimeCalculator uc = new UCTimeCalculator();
+                return uc;
+            }
             else
             {
                 UCNull ucnull = new UCNull();
@@ -539,6 +544,16 @@ namespace ToolsCollectionForProgram
             if (e.Button == System.Windows.Forms.MouseButtons.Left)
             {
                 剩余下载时间计算ToolStripMenuItem.DoDragDrop(剩余下载时间计算ToolStripMenuItem, DragDropEffects.Copy);//发送的拖拽效果
+            }
+        }
+        #endregion
+
+        #region 时间计算器拖拽效果
+        private void 时间计算器ToolStripMenuItem_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                时间计算器ToolStripMenuItem.DoDragDrop(时间计算器ToolStripMenuItem, DragDropEffects.Copy);//发送的拖拽效果
             }
         }
         #endregion

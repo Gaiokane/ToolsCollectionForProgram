@@ -111,6 +111,12 @@
     <Compile Include="UCSmplifySQL.Designer.cs">
       <DependentUpon>UCSmplifySQL.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCTimeCalculator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCTimeCalculator.Designer.cs">
+      <DependentUpon>UCTimeCalculator.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCUpperLowerCaseConversion.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -152,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UCSmplifySQL.resx">
       <DependentUpon>UCSmplifySQL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCTimeCalculator.resx">
+      <DependentUpon>UCTimeCalculator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCUpperLowerCaseConversion.resx">
       <DependentUpon>UCUpperLowerCaseConversion.cs</DependentUpon>
