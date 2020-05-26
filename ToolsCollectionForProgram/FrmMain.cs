@@ -74,6 +74,11 @@ namespace ToolsCollectionForProgram
                 UCTimeCalculator uc = new UCTimeCalculator();
                 return uc;
             }
+            if (btnName == "时间差计算器")
+            {
+                UCTimeDifferenceCalculator uc = new UCTimeDifferenceCalculator();
+                return uc;
+            }
             else
             {
                 UCNull ucnull = new UCNull();
@@ -554,6 +559,16 @@ namespace ToolsCollectionForProgram
             if (e.Button == System.Windows.Forms.MouseButtons.Left)
             {
                 时间计算器ToolStripMenuItem.DoDragDrop(时间计算器ToolStripMenuItem, DragDropEffects.Copy);//发送的拖拽效果
+            }
+        }
+        #endregion
+
+        #region 时间差计算器拖拽效果
+        private void 时间差计算器ToolStripMenuItem_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                时间差计算器ToolStripMenuItem.DoDragDrop(时间差计算器ToolStripMenuItem, DragDropEffects.Copy);//发送的拖拽效果
             }
         }
         #endregion

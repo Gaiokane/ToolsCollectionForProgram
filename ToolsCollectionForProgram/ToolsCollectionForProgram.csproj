@@ -117,6 +117,12 @@
     <Compile Include="UCTimeCalculator.Designer.cs">
       <DependentUpon>UCTimeCalculator.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCTimeDifferenceCalculator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCTimeDifferenceCalculator.Designer.cs">
+      <DependentUpon>UCTimeDifferenceCalculator.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCUpperLowerCaseConversion.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -161,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UCTimeCalculator.resx">
       <DependentUpon>UCTimeCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCTimeDifferenceCalculator.resx">
+      <DependentUpon>UCTimeDifferenceCalculator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCUpperLowerCaseConversion.resx">
       <DependentUpon>UCUpperLowerCaseConversion.cs</DependentUpon>
