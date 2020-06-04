@@ -79,6 +79,11 @@ namespace ToolsCollectionForProgram
                 UCTimeDifferenceCalculator uc = new UCTimeDifferenceCalculator();
                 return uc;
             }
+            if (btnName == "字符串计数")
+            {
+                UCCount uc = new UCCount();
+                return uc;
+            }
             else
             {
                 UCNull ucnull = new UCNull();
@@ -569,6 +574,16 @@ namespace ToolsCollectionForProgram
             if (e.Button == System.Windows.Forms.MouseButtons.Left)
             {
                 时间差计算器ToolStripMenuItem.DoDragDrop(时间差计算器ToolStripMenuItem, DragDropEffects.Copy);//发送的拖拽效果
+            }
+        }
+        #endregion
+
+        #region 字符串计数拖拽效果
+        private void 字符串计数ToolStripMenuItem_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                字符串计数ToolStripMenuItem.DoDragDrop(字符串计数ToolStripMenuItem, DragDropEffects.Copy);//发送的拖拽效果
             }
         }
         #endregion
