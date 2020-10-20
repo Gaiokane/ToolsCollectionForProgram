@@ -84,6 +84,11 @@ namespace ToolsCollectionForProgram
                 UCCount uc = new UCCount();
                 return uc;
             }
+            if (btnName == "数据库表结构")
+            {
+                UCSQLTableStructure uc = new UCSQLTableStructure();
+                return uc;
+            }
             else
             {
                 UCNull ucnull = new UCNull();
@@ -584,6 +589,16 @@ namespace ToolsCollectionForProgram
             if (e.Button == System.Windows.Forms.MouseButtons.Left)
             {
                 字符串计数ToolStripMenuItem.DoDragDrop(字符串计数ToolStripMenuItem, DragDropEffects.Copy);//发送的拖拽效果
+            }
+        }
+        #endregion
+
+        #region 数据库表结构拖拽效果
+        private void 数据库表结构ToolStripMenuItem_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                数据库表结构ToolStripMenuItem.DoDragDrop(数据库表结构ToolStripMenuItem, DragDropEffects.Copy);//发送的拖拽效果
             }
         }
         #endregion

@@ -40,6 +40,7 @@
             this.剩余下载时间计算ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.时间计算器ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.时间差计算器ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.字符串计数ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.窗口设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.单窗口ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.四窗口ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,7 +59,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.字符串计数ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.数据库表结构ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,7 +88,8 @@
             this.剩余下载时间计算ToolStripMenuItem,
             this.时间计算器ToolStripMenuItem,
             this.时间差计算器ToolStripMenuItem,
-            this.字符串计数ToolStripMenuItem});
+            this.字符串计数ToolStripMenuItem,
+            this.数据库表结构ToolStripMenuItem});
             this.功能集合ToolStripMenuItem.Name = "功能集合ToolStripMenuItem";
             this.功能集合ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
             this.功能集合ToolStripMenuItem.Text = "功能集合";
@@ -154,6 +156,13 @@
             this.时间差计算器ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.时间差计算器ToolStripMenuItem.Text = "时间差计算器";
             this.时间差计算器ToolStripMenuItem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.时间差计算器ToolStripMenuItem_MouseDown);
+            // 
+            // 字符串计数ToolStripMenuItem
+            // 
+            this.字符串计数ToolStripMenuItem.Name = "字符串计数ToolStripMenuItem";
+            this.字符串计数ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.字符串计数ToolStripMenuItem.Text = "字符串计数";
+            this.字符串计数ToolStripMenuItem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.字符串计数ToolStripMenuItem_MouseDown);
             // 
             // 窗口设置ToolStripMenuItem
             // 
@@ -335,12 +344,12 @@
             this.panel4.DragDrop += new System.Windows.Forms.DragEventHandler(this.panel4_DragDrop);
             this.panel4.DragEnter += new System.Windows.Forms.DragEventHandler(this.panel4_DragEnter);
             // 
-            // 字符串计数ToolStripMenuItem
+            // 数据库表结构ToolStripMenuItem
             // 
-            this.字符串计数ToolStripMenuItem.Name = "字符串计数ToolStripMenuItem";
-            this.字符串计数ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.字符串计数ToolStripMenuItem.Text = "字符串计数";
-            this.字符串计数ToolStripMenuItem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.字符串计数ToolStripMenuItem_MouseDown);
+            this.数据库表结构ToolStripMenuItem.Name = "数据库表结构ToolStripMenuItem";
+            this.数据库表结构ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.数据库表结构ToolStripMenuItem.Text = "数据库表结构";
+            this.数据库表结构ToolStripMenuItem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.数据库表结构ToolStripMenuItem_MouseDown);
             // 
             // FrmMain
             // 
@@ -406,5 +415,6 @@
         private System.Windows.Forms.ToolStripMenuItem 时间计算器ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 时间差计算器ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 字符串计数ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 数据库表结构ToolStripMenuItem;
     }
 }
