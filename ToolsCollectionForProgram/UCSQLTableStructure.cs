@@ -420,6 +420,9 @@ namespace ToolsCollectionForProgram
                                                                       //treeView1.CollapseAll();//折叠所有树节点
                                                 treeView1.Nodes[0].EnsureVisible();//垂直滚动条在展开所有节点后回到顶端
 
+                                                //修复未默认选中treeview，当点击节点时报错的问题
+                                                treeView1.Focus();
+
                                                 //MessageBox.Show(databasename);
                                                 //MessageBox.Show(treeView1.Nodes[0].Text);
 
@@ -504,6 +507,9 @@ namespace ToolsCollectionForProgram
                                                 treeView1.ExpandAll();//展开所有树节点
                                                                       //treeView1.CollapseAll();//折叠所有树节点
                                                 treeView1.Nodes[0].EnsureVisible();//垂直滚动条在展开所有节点后回到顶端
+
+                                                //修复未默认选中treeview，当点击节点时报错的问题
+                                                treeView1.Focus();
 
                                                 //MessageBox.Show(databasename);
                                                 //MessageBox.Show(treeView1.Nodes[0].Text);
@@ -738,6 +744,8 @@ namespace ToolsCollectionForProgram
                     txtboxPassword.Enabled = true;
                     btnShowDatabases.Enabled = true;
                 }
+
+                treeView1.Nodes.Clear();
             }
         }
         #endregion
