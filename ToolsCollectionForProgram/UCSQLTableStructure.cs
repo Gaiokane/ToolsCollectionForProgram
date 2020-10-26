@@ -16,10 +16,6 @@ namespace ToolsCollectionForProgram
     {
         string host, port, database, username, password, sqlconn;
 
-        string[] sqlQuerys;
-
-        string comBoxText;
-
         SqlConnection mssqlconn;
         SqlCommand mssqlcmd = new SqlCommand();
 
@@ -38,9 +34,6 @@ namespace ToolsCollectionForProgram
 
         private string sqlGetTableStructureForMSSQL;
         private string sqlGetTableStructureForMySQL;
-
-        //public SqlConnection mssqlconn;
-        //public MySqlConnection mysqlconn;
 
         public string sqltype;
 
@@ -69,30 +62,6 @@ namespace ToolsCollectionForProgram
         #region 数据库_单选按钮切换默认端口改变
         private void radiobtnMSSQL_CheckedChanged(object sender, EventArgs e)
         {
-            /*if (radiobtnMSSQL.Checked == true)
-            {
-                txtboxPort.Text = "1433";
-
-                txtboxHost.Text = "127.0.0.1";
-                txtboxPort.Text = "1433";
-                txtboxDatabase.Text = "qktest";
-                txtboxUsername.Text = "sa";
-                txtboxPassword.Text = "11111";
-                richtxtboxInsertSQL.Text = "INSERT INTO [qktest].[dbo].[forinsert]([xxx]) VALUES ('test{{id:7}}');";
-            }
-            else
-            {
-                txtboxPort.Text = "3306";
-
-                txtboxHost.Text = "127.0.0.1";
-                txtboxPort.Text = "3306";
-                txtboxDatabase.Text = "pagination";
-                txtboxUsername.Text = "qkk";
-                txtboxPassword.Text = "qkk";
-                richtxtboxInsertSQL.Text = "INSERT INTO `pagination`.`info`(`xxx`) VALUES ('test{{id:7}}');";
-            }*/
-
-
             int isLastConnectionSettingError = 0;
             string[] LastConnectionStrings;
             string radiobtn;
@@ -393,26 +362,7 @@ namespace ToolsCollectionForProgram
                                                 }
 
                                                 this.tn = tn;
-                                                this.mssqlconn = mssqlconn;
                                                 this.sqltype = "MSSQL";
-
-                                                //用了FrmSQLTableStructure.GetFrmSQLTableStructure().Activate();，就不能用fsqlts.Show();
-                                                //fsqlts.Show();
-
-                                                /*//设置只能打开一个，配合FrmSQLTableStructure中的GetFrmSQLTableStructure()设置
-                                                FrmSQLTableStructure.GetFrmSQLTableStructure().Activate();
-
-                                                //接收FrmSQLTableStructure返回的DialogResult，可自定义操作
-                                                if (fsqlts.ShowDialog() == DialogResult.OK)
-                                                {
-                                                    string str = fsqlts.tablename;
-                                                    int index = richtxtboxInsertSQL.SelectionStart;
-                                                    string s = richtxtboxInsertSQL.Text;
-                                                    s = s.Insert(index, str);
-                                                    richtxtboxInsertSQL.Text = s;
-                                                    richtxtboxInsertSQL.SelectionStart = index + str.Length;
-                                                    richtxtboxInsertSQL.Focus();
-                                                }*/
 
                                                 treeView1.Nodes.Add(tn);
 
@@ -479,28 +429,7 @@ namespace ToolsCollectionForProgram
                                                 }
 
                                                 this.tn = tn;
-                                                this.mysqlconn = mysqlconn;
                                                 this.sqltype = "MySQL";
-
-                                                //用了FrmSQLTableStructure.GetFrmSQLTableStructure().Activate();，就不能用fsqlts.Show();
-                                                //fsqlts.Show();
-
-                                                /*//设置只能打开一个，配合FrmSQLTableStructure中的GetFrmSQLTableStructure()设置
-                                                FrmSQLTableStructure.GetFrmSQLTableStructure().Activate();
-
-                                                //接收FrmSQLTableStructure返回的DialogResult，可自定义操作
-                                                if (fsqlts.ShowDialog() == DialogResult.OK)
-                                                {
-                                                    //MessageBox.Show(fsqlts.tablename);
-
-                                                    string str = fsqlts.tablename;
-                                                    int index = richtxtboxInsertSQL.SelectionStart;
-                                                    string s = richtxtboxInsertSQL.Text;
-                                                    s = s.Insert(index, str);
-                                                    richtxtboxInsertSQL.Text = s;
-                                                    richtxtboxInsertSQL.SelectionStart = index + str.Length;
-                                                    richtxtboxInsertSQL.Focus();
-                                                }*/
 
                                                 treeView1.Nodes.Add(tn);
 
@@ -560,7 +489,6 @@ namespace ToolsCollectionForProgram
             setTestConn();
 
             #region 读取并设置上一次数据库连接
-            #region 替换下面方法，分别读取MSSQL/MySQL最近连接记录
             int isLastConnectionSettingError = 0;
             string LastConnectionType = ConfigSettings.getLastConnectionType();
             string[] LastConnectionStrings;
@@ -650,59 +578,6 @@ namespace ToolsCollectionForProgram
                 setTestConn();
             }
             #endregion
-
-            #region （已注释，上面新方法替代）原版读取最近连接记录，只支持读取上一次连接记录，无法区分MSSQL/MySQL
-            /*
-                string[] LastConnectionStrings = ConfigSettings.getLastConnectionStrings();
-                if (LastConnectionStrings.Length != 7)
-                {
-                    ConfigSettings.setLastConnectionStrings(1, "127.0.0.1", false, "3306", "pagination", "qkk", "qkk");
-                    MessageBox.Show("最新数据库连接值不正确，已重置为默认值，请重新运行该程序！");
-                    Application.Exit();
-                }
-                else
-                {
-                    bool isPort = false;
-                    if (LastConnectionStrings[2] == "True")
-                    {
-                        isPort = true;
-                    }
-                    else if (LastConnectionStrings[2] == "False")
-                    {
-                        isPort = false;
-                    }
-                    else
-                    {
-                        isPort = false;
-                    }
-                    //int sqlType, string Host, bool isPort, string Port, string Database, string Username, string Password
-                    if (LastConnectionStrings[0] == "0")
-                    {
-                        radiobtnMSSQL.Checked = true;
-                        txtboxHost.Text = LastConnectionStrings[1];
-                        chkboxPort.Checked = isPort;
-                        txtboxPort.Text = LastConnectionStrings[3];
-                        txtboxDatabase.Text = LastConnectionStrings[4];
-                        txtboxUsername.Text = LastConnectionStrings[5];
-                        txtboxPassword.Text = LastConnectionStrings[6];
-                    }
-                    else if (LastConnectionStrings[0] == "1")
-                    {
-                        radiobtnMYSQL.Checked = true;
-                        txtboxHost.Text = LastConnectionStrings[1];
-                        chkboxPort.Checked = isPort;
-                        txtboxPort.Text = LastConnectionStrings[3];
-                        txtboxDatabase.Text = LastConnectionStrings[4];
-                        txtboxUsername.Text = LastConnectionStrings[5];
-                        txtboxPassword.Text = LastConnectionStrings[6];
-                    }
-                    else
-                    {
-                        setTestConn();
-                    }
-                }*/
-            #endregion
-            #endregion
         }
 
         #region 数据库_断开按钮单击事件
@@ -746,6 +621,7 @@ namespace ToolsCollectionForProgram
                 }
 
                 treeView1.Nodes.Clear();
+                dataGridView1.DataSource = null;
             }
         }
         #endregion
@@ -796,7 +672,6 @@ namespace ToolsCollectionForProgram
                     }
                 }
             }
-
         }
         #endregion
 
