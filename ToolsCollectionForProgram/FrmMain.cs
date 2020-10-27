@@ -16,7 +16,7 @@ namespace ToolsCollectionForProgram
          * 新增功能需要添加部分：
          * 1.窗体FrmMain菜单栏中功能集合下添加相应按钮
          * 2.菜单栏中按钮增加MouseDown事件（可参考：简化SQLToolStripMenuItem_MouseDown）
-         * 3.函数GetUserControlNameByButtonName添加对应窗体名称
+         * 3.函数 GetUserControlNameByButtonName 添加对应窗体名称
          */
 
         int typeid = 0;//拖入panel的控件类型id，0：其他，1：button，2：ToolStripItem
@@ -87,6 +87,11 @@ namespace ToolsCollectionForProgram
             if (btnName == "数据库表结构")
             {
                 UCSQLTableStructure uc = new UCSQLTableStructure();
+                return uc;
+            }
+            if (btnName == "导出Excel批注")
+            {
+                UCExportExcelComments uc = new UCExportExcelComments();
                 return uc;
             }
             else
@@ -599,6 +604,16 @@ namespace ToolsCollectionForProgram
             if (e.Button == System.Windows.Forms.MouseButtons.Left)
             {
                 数据库表结构ToolStripMenuItem.DoDragDrop(数据库表结构ToolStripMenuItem, DragDropEffects.Copy);//发送的拖拽效果
+            }
+        }
+        #endregion
+
+        #region 导出Excel批注拖拽效果
+        private void 导出Excel批注ToolStripMenuItem_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                导出Excel批注ToolStripMenuItem.DoDragDrop(导出Excel批注ToolStripMenuItem, DragDropEffects.Copy);//发送的拖拽效果
             }
         }
         #endregion

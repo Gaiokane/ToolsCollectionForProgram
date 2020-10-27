@@ -40,9 +40,28 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\dll\Gaiokane 2.0 含删除\Gaiokane.dll</HintPath>
     </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>lib\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=8.0.18.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>lib\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\NPOI.OpenXmlFormats.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -58,6 +77,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConfigSettings.cs" />
+    <Compile Include="ExcelHelper.cs" />
     <Compile Include="FrmDatabasesNameList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +118,12 @@
     </Compile>
     <Compile Include="UCEntityClassAssignment.Designer.cs">
       <DependentUpon>UCEntityClassAssignment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCExportExcelComments.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCExportExcelComments.Designer.cs">
+      <DependentUpon>UCExportExcelComments.cs</DependentUpon>
     </Compile>
     <Compile Include="UCExtractEntityClassName.cs">
       <SubType>UserControl</SubType>
@@ -181,6 +207,9 @@
     <EmbeddedResource Include="UCEntityClassAssignment.resx">
       <DependentUpon>UCEntityClassAssignment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UCExportExcelComments.resx">
+      <DependentUpon>UCExportExcelComments.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UCExtractEntityClassName.resx">
       <DependentUpon>UCExtractEntityClassName.cs</DependentUpon>
     </EmbeddedResource>
@@ -223,7 +252,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Collection.ico" />
+    <Content Include="lib\ICSharpCode.SharpZipLib.dll" />
     <Content Include="lib\MySql.Data.dll" />
+    <Content Include="lib\NPOI.dll" />
+    <Content Include="lib\NPOI.OOXML.dll" />
+    <Content Include="lib\NPOI.OpenXml4Net.dll" />
+    <Content Include="lib\NPOI.OpenXmlFormats.dll" />
     <None Include="Resources\20200417084103500_easyicon_net_128.ico" />
   </ItemGroup>
   <ItemGroup />
