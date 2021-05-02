@@ -137,6 +137,12 @@
     <Compile Include="UCGenerateRandomStrings.Designer.cs">
       <DependentUpon>UCGenerateRandomStrings.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCMergeExcelSheets.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCMergeExcelSheets.Designer.cs">
+      <DependentUpon>UCMergeExcelSheets.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCNull.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -215,6 +221,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UCGenerateRandomStrings.resx">
       <DependentUpon>UCGenerateRandomStrings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCMergeExcelSheets.resx">
+      <DependentUpon>UCMergeExcelSheets.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCNull.resx">
       <DependentUpon>UCNull.cs</DependentUpon>

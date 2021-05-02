@@ -42,6 +42,8 @@
             this.时间差计算器ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.字符串计数ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.数据库表结构ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.导出Excel批注ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.合并Excel的SheetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.窗口设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.单窗口ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.四窗口ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,7 +62,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.导出Excel批注ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,7 +92,8 @@
             this.时间差计算器ToolStripMenuItem,
             this.字符串计数ToolStripMenuItem,
             this.数据库表结构ToolStripMenuItem,
-            this.导出Excel批注ToolStripMenuItem});
+            this.导出Excel批注ToolStripMenuItem,
+            this.合并Excel的SheetToolStripMenuItem});
             this.功能集合ToolStripMenuItem.Name = "功能集合ToolStripMenuItem";
             this.功能集合ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
             this.功能集合ToolStripMenuItem.Text = "功能集合";
@@ -172,6 +174,20 @@
             this.数据库表结构ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.数据库表结构ToolStripMenuItem.Text = "数据库表结构";
             this.数据库表结构ToolStripMenuItem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.数据库表结构ToolStripMenuItem_MouseDown);
+            // 
+            // 导出Excel批注ToolStripMenuItem
+            // 
+            this.导出Excel批注ToolStripMenuItem.Name = "导出Excel批注ToolStripMenuItem";
+            this.导出Excel批注ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.导出Excel批注ToolStripMenuItem.Text = "导出Excel批注";
+            this.导出Excel批注ToolStripMenuItem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.导出Excel批注ToolStripMenuItem_MouseDown);
+            // 
+            // 合并Excel的SheetToolStripMenuItem
+            // 
+            this.合并Excel的SheetToolStripMenuItem.Name = "合并Excel的SheetToolStripMenuItem";
+            this.合并Excel的SheetToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.合并Excel的SheetToolStripMenuItem.Text = "合并Excel的Sheet";
+            this.合并Excel的SheetToolStripMenuItem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.合并Excel的SheetToolStripMenuItem_MouseDown);
             // 
             // 窗口设置ToolStripMenuItem
             // 
@@ -353,13 +369,6 @@
             this.panel4.DragDrop += new System.Windows.Forms.DragEventHandler(this.panel4_DragDrop);
             this.panel4.DragEnter += new System.Windows.Forms.DragEventHandler(this.panel4_DragEnter);
             // 
-            // 导出Excel批注ToolStripMenuItem
-            // 
-            this.导出Excel批注ToolStripMenuItem.Name = "导出Excel批注ToolStripMenuItem";
-            this.导出Excel批注ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.导出Excel批注ToolStripMenuItem.Text = "导出Excel批注";
-            this.导出Excel批注ToolStripMenuItem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.导出Excel批注ToolStripMenuItem_MouseDown);
-            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -426,5 +435,6 @@
         private System.Windows.Forms.ToolStripMenuItem 字符串计数ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 数据库表结构ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 导出Excel批注ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 合并Excel的SheetToolStripMenuItem;
     }
 }

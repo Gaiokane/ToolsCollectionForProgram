@@ -94,6 +94,11 @@ namespace ToolsCollectionForProgram
                 UCExportExcelComments uc = new UCExportExcelComments();
                 return uc;
             }
+            if (btnName == "合并Excel的Sheet")
+            {
+                UCMergeExcelSheets uc = new UCMergeExcelSheets();
+                return uc;
+            }
             else
             {
                 UCNull ucnull = new UCNull();
@@ -614,6 +619,16 @@ namespace ToolsCollectionForProgram
             if (e.Button == System.Windows.Forms.MouseButtons.Left)
             {
                 导出Excel批注ToolStripMenuItem.DoDragDrop(导出Excel批注ToolStripMenuItem, DragDropEffects.Copy);//发送的拖拽效果
+            }
+        }
+        #endregion
+
+        #region 合并Excel的Sheet拖拽效果
+        private void 合并Excel的SheetToolStripMenuItem_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                合并Excel的SheetToolStripMenuItem.DoDragDrop(合并Excel的SheetToolStripMenuItem, DragDropEffects.Copy);//发送的拖拽效果
             }
         }
         #endregion
